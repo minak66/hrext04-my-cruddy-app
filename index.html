@@ -9,16 +9,83 @@
             integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
             crossorigin="anonymous"></script>
     <script src="app.js"></script>
-
   </head>
   <body>
+    
+    <div class="top"></div>
+    <div class="header">
+      <img class="banner" src="pics\life-is-a-book.jpg"></img>
+      <img class="banner" src="pics\pic1.jpeg"></img>
+      <img class="banner" src="pics\3.jpeg"></img>
+      <img class="banner" src="pics\pic1.jpeg"></img>
+      <img class="banner" src="pics\3.jpeg"></img>
+      <img class="banner" src="pics\pic1.jpeg"></img>
+      <img class="banner" src="pics\3.jpeg"></img>
+      
+    </div>
+    <div class="menu">
+      <img class="searchimg" src="pics\search.png"></img>
+      <input class="inputstyle" type="text" id="inputSearch" placeholder="search...">
+      <button class="menustyle" id="search">search</button>
+      <button class = "disp-memoir-btn menustyle">show all memoirs</button>
+      <button class = "del-memoir-btn menustyle">delete all memoir</button>
+    </div>
+    <div class= "outercontainer">
+      <div class="maincontainer">
+        <textarea type = "text" class = "user-memoir-body" placeholder = "Write a few lines about your day"></textarea>
+      </br></br>
+        <div class="img"></div>
+        </br>
+        <button class = "add-memoir">add memoir</button> &nbsp; &nbsp;
+        <form method="post" enctype="multipart/form-data">
+        <input type="file" id="image_uploads" name="image_uploads" accept=".jpg, .jpeg, .png" multiple>
+        <button type="button" class="chfile menustyle">upload</button>
+        <script>
+        var input = document.querySelector('#image_uploads');
+        //var preview = document.querySelector('.preview');
+        //input.style.visibility = 'hidden';
+        input.addEventListener('change', updateImageDisplay);
 
-  <input type="text" class="user-input-title" placeholder="Enter the Title">
-  <textarea class="user-input-body" placeholder="Enter the body of text"></textarea>
+        function updateImageDisplay() {
+  // while(preview.firstChild) {
+  //   preview.removeChild(preview.firstChild);
+  // }
+  //alert("hi");
+  var preview=$(".img");
 
-  <button class="add-text-btn">add text</button>
-  <button class="del-text-btn">delete text</button>
+  var curFiles = input.files;
+  if(curFiles.length === 0) {
+    var para = document.createElement('p');
+    para.textContent = 'No files currently selected for upload';
+    preview.appendChild(para);
+  } else {
+    //var list = document.createElement('ol');
+    //preview.append(list);
+    for(var i = 0; i < curFiles.length; i++) {
+      //var listItem = document.createElement('li');
+      //var para = document.createElement('p');
+      //if(validFileType(curFiles[i])) {
+        //para.textContent = 'File name ' + curFiles[i].name + ', file size ' + returnFileSize(curFiles[i].size) + '.';
+        var image = document.createElement('img');
+        image.src = window.URL.createObjectURL(curFiles[i]);
 
-  <div class="display"></div>
+        preview.append(image);
+        //listItem.append(para);
+
+      } 
+      // else {
+      //   para.textContent = 'File name ' + curFiles[i].name + ': Not a valid file type. Update your selection.';
+      //   listItem.appendChild(para);
+      // }
+
+      //list.append(listItem);
+    }
+  }
+
+      </script>
+        </form>
+      </div>
+    </div>
+  
   </body>
 </html>

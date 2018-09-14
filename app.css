@@ -1,0 +1,138 @@
+body{
+	background: #d4d08f;
+}
+.ccmtstyle{
+	color: #5223d8;
+}
+
+.st{
+	font-size: 18px;
+	border-radius: 10px;
+    border-color: #735950;
+    border-style: solid;
+    background: #d4bda270;
+}
+
+
+legend{
+    background-color: #000;
+    color: #fff;
+    padding: 3px 6px;
+}
+
+.display{
+	flex: 1 1;
+	width:620px;
+	min-height: 800px;
+	background-image: url(https://pre00.deviantart.net/3c7c/th/pre/i/2008/268/4/4/old_paper_01_by_silver_.png);
+	background-repeat: no-repeat;
+	flex-direction: column;
+	padding-top: 150px;
+	padding-left: 150px;
+}
+
+.outercontainer{
+	display: flex;
+	flex-wrap: wrap;
+	background-image: url(https://pre00.deviantart.net/3c7c/th/pre/i/2008/268/4/4/old_paper_01_by_silver_.png);
+	background-repeat: no-repeat;
+	
+}
+.maincontainer{
+	flex: 1 1;
+	width:620px;
+	display: flex;
+	min-height: 800px;
+	background-repeat: no-repeat;
+	flex-direction: column;
+	padding-top: 100px;
+	padding-left: 100px;
+	
+}
+
+.menu{
+	display: flex;
+	height: 30px;
+    background: #dbd0e6;
+	font-size: 20px;	
+	justify-content: center;
+}
+
+.header{
+	width: 300px;
+    height: 160px;
+	display: flex;	
+}
+
+.banner{
+	width: 200px;
+    height: 150px;
+}
+
+.top{
+	display: flex;
+	height: 10px;
+    background: #dbd0e6;
+}
+
+.menustyle{
+	color: white;
+	background-color: #7b7bde;
+	font-size: 14px;
+	margin: 0px;
+	font-family: serif;
+	border-radius: 10px;
+}
+
+img{
+	width: 200px;
+    height: 200px;
+
+}
+.menustyle:hover{
+	background-color: white;
+    color: darkblue;
+}
+
+input[type="text"]{
+	flex-basis: 300px; 
+}
+
+.inputstyle{
+	border-radius: 8px;
+}
+
+.searchimg{
+	opacity: 0.5;
+	width: 30px;
+    height: 30px;
+}
+.user-memoir-body{
+	background: #fff6f6;
+	width: 400px;
+	height: 200px;
+}
+.add-memoir{
+	color: white;
+	background-color: #7b7bde;
+	font-size: 14px;
+	margin: 0px;
+	font-family: serif;
+	border-radius: 10px;
+	width: 100px;
+	height: 30px;
+}
+.add-memoir:hover{
+	background-color: white;
+    color: darkblue;
+}
+.chfile{
+	display: flex;
+	width: 100px;
+	height: 30px;
+}
+#fileInput{
+	display: flex;
+	width: 300px;
+	height: 30px;
+}
